@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="tictactoe">
+<head>
+	<title>It's Tic Tac Toe Time!</title>
+   <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+	<!-- Normalize CSS -->
+    <link rel="stylesheet" src="https://normalize-css.googlecode.com/svn/trunk/normalize.min.css">
+    <!-- App CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+    <!-- App javascript -->
+    <script src="app.js"></script>
+
+</head>
+<body ng-controller="TicTacToeController" ng-model="gameContainer">
+<p>Moves: {{gameContainer.moveCount}}</p>
+	<div class="bgcol" ng-class="{colored: background.colored}">
+      <h1>Tic Tac Toe</h1>
+		
+		<div class="container">
+			
+			<div ng-repeat="cell in gameContainer.cellListArray" id="{{cell.id}}" class="box {{cell.color}}" ng-class="{xMark: cell.contents == 'X', oMark: cell.contents == 'O', highlight: cell.highlight}" ng-click="markCell(cell)">
+				{{cell.contents}}
+			</div>	
+		</div>
+		<a href="#" onclick="location.reload()">restart</a>
+	</div>
+</body>
+</html>

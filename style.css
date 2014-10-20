@@ -1,0 +1,78 @@
+.bgcol {
+	position: fixed;
+	overflow: auto;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.bgcol.colored {
+	background-color: grey;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 650px;
+	max-height: 500px;
+	padding-top: 0;
+	margin-top: 0;
+	margin-bottom: 5em;
+	position: relative;
+}
+
+.box {
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	margin: 0;
+	overflow: auto;
+	position: relative;
+}
+
+.red {
+	background-color: rgba(255,0,0,0.3);
+	left: 30px;
+	top: 20px;
+	z-index: 1;
+}
+.green { background-color: rgba(0,255,0,0.3);
+	left: 30px;
+	top: 20px;
+	z-index: 2;
+	
+
+}
+.blue { background-color: rgba(0,0,255,0.3);
+	left: 30px;
+	top: 20px;
+	z-index: 3;
+	
+}
+
+.xMark {
+	background-image: url(http://data1.whicdn.com/images/73482898/thumb.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+.oMark {
+	background-image: url(http://puebladehoy.com/wp-content/plugins/WeatherSlider/img/sun.png?561687.0638914406);
+	background-repeat: no-repeat; 
+	background-position: center;
+	
+}
+
+.highlight {
+	background-color: yellow;
+	border: 2px solid green;
+}
+
+h1 {
+	font-family: 'Calligraffitti', cursive;
+	text-align: center;
+	font-size: 7em;
+	margin-top: 0;
+	margin-bottom: 0;
+	
+    
+}
